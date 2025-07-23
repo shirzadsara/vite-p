@@ -32,9 +32,9 @@ export default function CartPage() {
       ) : (
         <div className="space-y-4">
           {cart.map(item => (
-            <div key={item.id} className="flex cursor-pointer items-center justify-between bg-white p-4 rounded shadow"
-            onClick={() => navigate(`/product/${item.id}`)}>
-              <div className="flex items-center space-x-4">
+            <div key={item.id} className="flex  items-center justify-between bg-white p-4 rounded shadow"
+            >
+              <div className="flex cursor-pointer items-center space-x-4" onClick={() => navigate(`/product/${item.id}`)}>
                 <img src={item.photo} alt={item.titlle} className="w-16 h-16 object-cover rounded"/>
                 <div>
                   <h2 className="font-semibold">{item.titlle}</h2>

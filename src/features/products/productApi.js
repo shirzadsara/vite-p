@@ -9,7 +9,7 @@ export const productApi=createApi({
       query: () => "DrillingMachines",
       providesTags: ["Products"]
      }),
-updateCart: builder.mutation({
+    updateCart: builder.mutation({
       query: ({ id, quantity }) => ({
         url: `cart/${id}`,
         method: "PATCH",
@@ -41,7 +41,9 @@ updateCart: builder.mutation({
   }),
 });
 
+
 export const {
     useGetProductsQuery,
-    useUpdateCartMutation,useAddToCartMutation,
+    useUpdateCartMutation,
+    useAddToCartMutation,
   useGetCartQuery,useDeleteCartMutation} = productApi;
